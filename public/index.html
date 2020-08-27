@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="cookie.png" rel="icon" type="image/x-icon"/>
+    <title>Cookie Clicker Live</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@babel/standalone@7.7.4/babel.min.js"></script>
+  </head>
+  <body class="cookie" onclick="clicked()">
+    <!--
+      Navbar
+    -->
+    <nav class = 'nav'>
+      <button class = "pg1">Statistics</button>
+      <button class = "pg2">Leaderboard</button>
+      <button class = "pg3">Chat</button>
+    </nav>
+
+    <!--
+      FIXED THINGS
+    -->
+    <section class = "fixed stats"><p class = "white">ID: <span id="id">RCT-eaHpRbOzWMdVAAAA</span></p>
+    <p>Goal: <span id="goal">0</span><br>
+    Cookies needed: <span id="reached">0</span><br><span style = "display:block;" class = "font-ss"><br></span>Your Share Towards Goal: <span id="togoal">0</span><br>
+    Percentage To Goal: <span id="etogoal">0</span></p></section>
+
+    <!--
+      Statistics
+    -->
+    <section class = "stats page1 cus-hei">
+      <p>Players: <span id = "people">1</span><br>Time Since Last Click: <span id="timer">0</span> s, 
+      Your CPS: <span id="cps">0</span><br>
+      Your Cookies: <span id="clicks">0</span><br>
+      Total Cookies: <span id="total">0</span></p>
+      <p>Your Share Towards Global Pot: <span id="tototal">0</span></p>
+      <p>Average Time Taken: <span id="atimer">0</span> seconds<br>
+      Time Taken: <span id="ctimer">0</span> seconds<br>
+      <p>Previous time taken: <span id="ltimer">0</span> seconds
+      </p>
+    </section>
+    
+    <!--
+      Leaderboard
+    -->
+    <section class = "chat hide page2">
+      <p><strong>Leaderboard</strong></p>
+      <ol class = "leaderboard"></ol>
+    </section>
+
+    <!--
+      Chat
+    -->
+    <section class = "chat hide page3 cus-hei">
+      <p>
+        <div id="chat">
+          <input id="text" type="text" placeholder="Your message" />
+          <input type="button" value="Send" class = "send" />
+        </div>
+        <div class = "messages">
+          <strong>Messages</strong><br>
+        </div>
+      </p>
+    </section>
+
+    <footer>
+      <p><span>Click </span>in the window to increase your score!</p>
+    </footer>
+
+    <!--
+      Scripts
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js" type="text/babel"></script>
+  </body>
+</html>
